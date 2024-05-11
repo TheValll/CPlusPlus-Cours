@@ -1,0 +1,3 @@
+﻿  cours.cpp
+C:\Users\Valentin\Documents\CPlusPlus-Cours\cours\cours.cpp(84,6): warning C4101: 'x': unreferenced local variable
+  cours.vcxproj -> C:\Users\Valentin\Documents\CPlusPlus-Cours\cours\x64\Debug\cours.exe
