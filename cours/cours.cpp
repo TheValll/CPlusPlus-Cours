@@ -51,6 +51,24 @@ Exercice 1:
 Simple calculatrice :
 Écrivez un programme C++ qui fait la somme de 2 inputs de l'utilisateur
 
+Tye de data :
+
+boolean	1 byte	Stores true or false values
+char	1 byte	Stores a single character/letter/number, or ASCII values
+int	2 or 4 bytes	Stores whole numbers, without decimals
+float	4 bytes	Stores fractional numbers, containing one or more decimals. Sufficient for storing 6-7 decimal digits
+double	8 bytes	Stores fractional numbers, containing one or more decimals. Sufficient for storing 15 decimal digits
+
+Un nombre à virgule flottante peut également être un nombre scientifique avec un « e » pour indiquer la puissance de 10 :
+float f1 = 35e3;
+double d1 = 12E4;
+cout << f1;
+cout << d1;
+
+Un type de données booléen est déclaré avec le boolmot-clé et ne peut prendre que les valeurs trueou false.
+
+Lorsque la valeur est renvoyée, true = 1et false = 0.
+
 */
 
 
