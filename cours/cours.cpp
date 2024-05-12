@@ -13,7 +13,7 @@ Remarque : Chaque instruction C++ se termine par un point-virgule ;
 
 */
 
-/* Les variables :
+/* Les variables :	
 
 int- stocke les entiers (nombres entiers), sans décimales, comme 123 ou -123
 double - stocke les nombres à virgule flottante, avec des décimales, telles que 19, 99 ou - 19, 99
@@ -318,7 +318,211 @@ for (int i = 0; i < 2; i++) {
   }
 }
 
+
+Les structures :
+
+Les structures (également appelées structs) sont un moyen de regrouper plusieurs variables liées en un seul endroit. Chaque variable de la structure est appelée membre de la structure.
+
+Contrairement à un tableau , une structure peut contenir de nombreux types de données différents (int, string, bool, etc.).
+
+struct {             // Structure declaration
+  int myNum;         // Member (int variable)
+  string myString;   // Member (string variable)
+} myStructure;       // Structure variable
+
+Vous pouvez utiliser une virgule ( ,) pour utiliser une structure dans plusieurs variables :
+
+struct {
+  int myNum;
+  string myString;
+} myStruct1, myStruct2, myStruct3; // Multiple structure variables separated with commas
+
+Pour créer une structure nommée, mettez le nom de la structure juste après le structmot-clé :
+
+struct myDataType { // This structure is named "myDataType"
+  int myNum;
+  string myString;
+};
+
+myDataType myVar;
+
+
+Les references :
+
+string food = "Pizza";  // food variable
+string &meal = food;    // reference to food
+
+Un pointeur est une variable qui stocke l’adresse mémoire comme valeur .
+
+Une variable pointeur pointe vers un type de données (comme intou string) du même type et est créée avec l' *opérateur. 
+L'adresse de la variable avec laquelle vous travaillez est affectée au pointeur
+
+Vous pouvez également modifier la valeur du pointeur. Mais notez que cela modifiera également la valeur de la variable d'origine :
+string food = "Pizza";
+string* ptr = &food;
+
+// Output the value of food (Pizza)
+cout << food << "\n";
+
+// Output the memory address of food (0x6dfed4)
+cout << &food << "\n";
+
+// Access the memory address of food and output its value (Pizza)
+cout << *ptr << "\n";
+
+// Change the value of the pointer
+*ptr = "Hamburger";
+
+// Output the new value of the pointer (Hamburger)
+cout << *ptr << "\n";
+
+// Output the new value of the food variable (Hamburger)
+cout << food << "\n";
+
+
+Les fonctions :
+
+C++ fournit certaines fonctions prédéfinies, telles que main(), qui sont utilisées pour exécuter du code. 
+Mais vous pouvez également créer vos propres fonctions pour effectuer certaines actions.
+
+void myFunction() {
+  // code to be executed
+}
+myFunction()
+
+Remarque : Si une fonction définie par l'utilisateur, telle que myFunction()est déclarée après la main()fonction, une erreur se produira 
+
+Cependant, il est possible de séparer la déclaration et la définition de la fonction – pour optimiser le code.
+
+Vous verrez souvent des programmes C++ qui ont une déclaration de fonction ci-dessus main()et une définition de fonction ci-dessous main(). 
+Cela rendra le code mieux organisé et plus facile à lire :
+
+// Function declaration
+void myFunction();
+
+// The main method
+int main() {
+  myFunction();  // call the function
+  return 0;
+}
+
+// Function definition
+void myFunction() {
+  cout << "I just got executed!";
+}
+
+Les informations peuvent être transmises aux fonctions en tant que paramètre. Les paramètres agissent comme des variables à l'intérieur de la fonction.
+
+Les paramètres sont spécifiés après le nom de la fonction, entre parenthèses. 
+Vous pouvez ajouter autant de paramètres que vous le souhaitez, il suffit de les séparer par une virgule :
+
+void functionName(parameter1, parameter2, parameter3) {
+  // code to be executed
+}
+
+Vous pouvez également utiliser une valeur de paramètre par défaut, en utilisant le signe égal ( =).
+
+Si nous appelons la fonction sans argument, elle utilise la valeur par défaut ("Norvège") :
+void myFunction(string country = "Norway") {
+  cout << country << "\n";
+}
+Le voidmot-clé, utilisé dans les exemples précédents, indique que la fonction ne doit pas renvoyer de valeur. Si vous souhaitez que la fonction renvoie une valeur, 
+vous pouvez utiliser un type de données (tel que int, string, etc.) au lieu de voidet utiliser le return mot-clé à l'intérieur de la fonction :
+
+int myFunction(int x) {
+  return 5 + x;
+}
+
+int main() {
+  cout << myFunction(3);
+  return 0;
+}
+
+Vous pouvez également stocker le résultat dans une variable :
+int z = myFunction(5, 3);
+
+Vous pouvez également passer des tableaux à une fonction :
+void myFunction(int myNumbers[5]) {
+  for (int i = 0; i < 5; i++) {
+	cout << myNumbers[i] << "\n";
+  }
+}
+
+int main() {
+  int myNumbers[5] = {10, 20, 30, 40, 50};
+  myFunction(myNumbers);
+  return 0;
+}
+
+Avec la surcharge de fonctions , plusieurs fonctions peuvent avoir le même nom avec des paramètres différents :
+int myFunction(int x)
+float myFunction(float x)
+double myFunction(double x, double y)
+
+Au lieu de définir deux fonctions qui devraient faire la même chose, il vaut mieux en surcharger une.
+
+Dans l'exemple ci-dessous, nous surchargeons la plusFuncfonction pour qu'elle fonctionne à la fois pour int et double:
+
+int plusFunc(int x, int y) {
+  return x + y;
+}
+
+double plusFunc(double x, double y) {
+  return x + y;
+}
+
+int main() {
+  int myNum1 = plusFunc(8, 5);
+  double myNum2 = plusFunc(4.3, 6.26);
+  cout << "Int: " << myNum1 << "\n";
+  cout << "Double: " << myNum2;
+  return 0;
+}
+
+La récursivité est la technique permettant d'appeler une fonction elle-même. Cette technique permet de décomposer des problèmes complexes en problèmes simples plus faciles à résoudre.
+
+La récursivité peut être un peu difficile à comprendre. La meilleure façon de comprendre comment cela fonctionne est de l’expérimenter.
+
+Additionner deux nombres est facile à faire, mais ajouter une plage de nombres est plus compliqué. Dans l'exemple suivant,
+la récursivité est utilisée pour additionner une plage de nombres en la décomposant en la tâche simple consistant à ajouter deux nombres :
+
+int sum(int k) {
+  if (k > 0) {
+	return k + sum(k - 1);
+  } else {
+	return 0;
+  }
+}
+
+int main() {
+  int result = sum(10);
+  cout << result;
+  return 0;
+}
+
+Lorsque la sum()fonction est appelée, elle ajoute un paramètre kà la somme de tous les nombres inférieurs à k et renvoie le résultat.
+Lorsque k devient 0, la fonction renvoie simplement 0. Lors de son exécution, le programme suit ces étapes :
+
+10 + somme(9)
+10 + ( 9 + somme(8) )
+10 + ( 9 + ( 8 + somme(7) ) )
+...
+10 + 9 + 8 + 7 + 6 + 5 + 4 + 3 + 2 + 1 + somme(0)
+10 + 9 + 8 + 7 + 6 + 5 + 4 + 3 + 2 + 1 + 0
+
 */
+
+void myFunction(string fname) {
+	cout << fname << " Refsnes\n";
+}
+
+int plusFunc(int x, int y) {
+	return x + y;
+}
+
+double plusFunc(double x, double y) {
+	return x + y;
+}
 
 
 int main() {
@@ -383,7 +587,7 @@ int main() {
 	string cars[4] = { "Volvo", "BMW", "Ford", "Mazda" };
 	// cout << cars[0];
 
-	int myNumbers[5] = { 10, 20, 30, 40, 50 };
+	/*int myNumbers[5] = { 10, 20, 30, 40, 50 };*/
 	/*for (int i : myNumbers) {
 		cout << i << "\n";
 	}*/
@@ -391,6 +595,51 @@ int main() {
 	int myNumbers[5] = { 10, 20, 30, 40, 50 };
 	int getArrayLength = sizeof(myNumbers) / sizeof(int);
 	//cout << getArrayLength;
+
+	// Create a structure variable called myStructure
+	struct {
+		int myNum;
+		string myString;
+	} myStructure;
+
+	// Assign values to members of myStructure
+	myStructure.myNum = 1;
+	myStructure.myString = "Hello World!";
+
+	// Print members of myStructure
+	//cout << myStructure.myNum << "\n";
+	//cout << myStructure.myString << "\n";
+
+	//string food = "Pizza";
+	//string& meal = food;
+
+
+	//cout << food << "\n";
+	//cout << meal << "\n";
+	//cout << &food << "\n";
+
+	string food = "Pizza";
+	string* ptr = &food;  
+
+	// Output the value of food (Pizza)
+	//cout << food << "\n";
+
+	// Output the memory address of food
+	//cout << &food << "\n";
+
+	// Output the memory address of food with the pointer
+	//cout << ptr << "\n";
+
+	/*cout << *ptr << "\n";*/
+
+	//myFunction("Liam");
+	//myFunction("Lycos");
+
+	int myNum1 = plusFunc(8, 5);
+	double myNum2 = plusFunc(4.3, 6.26);
+	//cout << "Int: " << myNum1 << "\n";
+	//cout << "Double: " << myNum2;
+
 
 	return 0;
 }
