@@ -1,2 +1,6 @@
-﻿  tp1.cpp
+﻿  cours.cpp
+C:\Users\Valentin\Documents\CPlusPlus-Cours\cours\cours.cpp(323,6): warning C4101: 'result': unreferenced local variable
+C:\Users\Valentin\Documents\CPlusPlus-Cours\cours\cours.cpp(322,6): warning C4101: 'input2': unreferenced local variable
+C:\Users\Valentin\Documents\CPlusPlus-Cours\cours\cours.cpp(315,6): warning C4101: 'x': unreferenced local variable
+C:\Users\Valentin\Documents\CPlusPlus-Cours\cours\cours.cpp(321,6): warning C4101: 'input1': unreferenced local variable
   cours.vcxproj -> C:\Users\Valentin\Documents\CPlusPlus-Cours\cours\x64\Debug\cours.exe

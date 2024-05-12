@@ -262,6 +262,62 @@ int myNumbers[5] = {10, 20, 30, 40, 50};
 for (int i : myNumbers) {
   cout << i << "\n";
 }
+
+Le continue instruction interrompt une itération (dans la boucle), si une condition spécifiée se produit, et continue avec l'itération suivante dans la boucle.
+
+
+Les tableaux :
+
+
+Les tableaux sont utilisés pour stocker plusieurs valeurs dans une seule variable, au lieu de déclarer des variables distinctes pour chaque valeur.
+
+Pour déclarer un tableau, définissez le type de variable, précisez le nom du tableau suivi de crochets et précisez le nombre d'éléments qu'il doit stocker :
+
+string name[value];
+string cars[4] = {"Volvo", "BMW", "Ford", "Mazda"};
+
+for (type variableName : arrayName) {
+  // code block to be executed
+}
+
+En C++, vous n'avez pas besoin de spécifier la taille du tableau. 
+Le compilateur est suffisamment intelligent pour déterminer la taille du tableau en fonction du nombre de valeurs insérées :
+
+string cars[] = {"Volvo", "BMW", "Ford"}; // Three array elements
+
+Pour obtenir la taille d'un tableau, vous pouvez utiliser l' sizeof() opérateur :
+RESULTAT EN OCTETS
+
+Vous avez appris dans le chapitre Types de données qu'un int type fait généralement 4 octets, 
+donc dans l'exemple ci-dessus, 4 x 5 (4 octets x 5 éléments) = 20 bytes .
+
+Utilsier sizeof(myNumbers) / sizeof(int); pour connaitre la vrai taille du tableau
+
+Un tableau multidimensionnel est un tableau de tableaux.
+string letters[2][4];
+string letters[2][4] = {
+  { "A", "B", "C", "D" },
+  { "E", "F", "G", "H" }
+};
+
+Pour accéder à un élément d'un tableau multidimensionnel, spécifiez un numéro d'index dans chacune des dimensions du tableau.
+cout << letters[0][2];
+
+Pour parcourir un tableau multidimensionnel, vous avez besoin d’une boucle pour chacune des dimensions du tableau.
+
+L'exemple suivant affiche tous les éléments du tableau de lettres :
+
+string letters[2][4] = {
+  { "A", "B", "C", "D" },
+  { "E", "F", "G", "H" }
+};
+
+for (int i = 0; i < 2; i++) {
+  for (int j = 0; j < 4; j++) {
+	cout << letters[i][j] << "\n";
+  }
+}
+
 */
 
 
@@ -316,6 +372,25 @@ int main() {
 	// cout << oui;
 
 	string greeting = "Hello";
+
+	//for (int i = 0; i < 10; i++) {
+	//	if (i == 4) {
+	//		continue;
+	//	}
+	//	cout << i << "\n";
+	//}
+
+	string cars[4] = { "Volvo", "BMW", "Ford", "Mazda" };
+	// cout << cars[0];
+
+	int myNumbers[5] = { 10, 20, 30, 40, 50 };
+	/*for (int i : myNumbers) {
+		cout << i << "\n";
+	}*/
+
+	int myNumbers[5] = { 10, 20, 30, 40, 50 };
+	int getArrayLength = sizeof(myNumbers) / sizeof(int);
+	//cout << getArrayLength;
 
 	return 0;
 }
