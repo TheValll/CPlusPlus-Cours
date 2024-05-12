@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cmath>
 using namespace std;
 
 /* 
@@ -69,6 +70,198 @@ Un type de données booléen est déclaré avec le boolmot-clé et ne peut prendre qu
 
 Lorsque la valeur est renvoyée, true = 1et false = 0.
 
+
+Les operateurs :
+
++	Addition	Adds together two values	x + y
+-	Subtraction	Subtracts one value from another	x - y
+*	Multiplication	Multiplies two values	x * y
+/	Division	Divides one value by another	x / y
+%	Modulus	Returns the division remainder	x % y
+++	Increment	Increases the value of a variable by 1	++x
+--	Decrement	Decreases the value of a variable by 1	--x
+
+
+Operator Exemple Same As
+=	x = 5	x = 5
++=	x += 3	x = x + 3
+-=	x -= 3	x = x - 3
+*=	x *= 3	x = x * 3
+/=	x /= 3	x = x / 3
+%=	x %= 3	x = x % 3
+&=	x &= 3	x = x & 3
+|=	x |= 3	x = x | 3
+^=	x ^= 3	x = x ^ 3
+>>=	x >>= 3	x = x >> 3
+<<=	x <<= 3	x = x << 3
+
+==	Equal to	x == y
+!=	Not equal	x != y
+>	Greater than	x > y
+<	Less than	x < y
+>=	Greater than or equal to	x >= y
+<=	Less than or equal to	x <= y
+
+&& 	Logical and	Returns true if both statements are true	x < 5 &&  x < 10
+|| 	Logical or	Returns true if one of the statements is true	x < 5 || x < 4
+!	Logical not	Reverse the result, returns false if the result is true	!(x < 5 && x < 10)
+
+
+Les strings :
+
+L' +opérateur peut être utilisé entre des chaînes pour les additionner afin de créer une nouvelle chaîne. C'est ce qu'on appelle la concaténation
+Une chaîne en C++ est en fait un objet contenant des fonctions pouvant effectuer certaines opérations sur des chaînes. Par exemple,
+vous pouvez également concaténer des chaînes avec la append()fonction :
+
+string firstName = "John ";
+string lastName = "Doe";
+string fullName = firstName.append(lastName);
+cout << fullName;
+
+Pour obtenir la longueur d'une chaîne, utilisez la length()fonction :
+string txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+cout << "The length of the txt string is: " << txt.length();
+
+Vous pouvez accéder aux caractères d'une chaîne en vous référant à son numéro d'index entre crochets [].
+string myString = "Hello";
+cout << myString[0];
+
+Pour modifier la valeur d'un caractère spécifique dans une chaîne, reportez-vous au numéro d'index et utilisez des guillemets simples :
+string myString = "Hello";
+myString[0] = 'J';
+cout << myString;
+
+La solution pour éviter ce problème est d'utiliser le caractère d'échappement antislash .
+
+Le caractère d'échappement barre oblique inverse ( \) transforme les caractères spéciaux en caractères de chaîne :
+
+\'	'	Single quote
+\"	"	Double quote
+\\	\	Backslash
+
+Cependant, cinconsidère un espace (espaces, tabulations, etc.) comme un caractère de fin, 
+ce qui signifie qu'il ne peut stocker qu'un seul mot (même si vous tapez plusieurs mots)
+C'est pourquoi, lorsque nous travaillons avec des chaînes, nous utilisons souvent la getline() fonction pour lire une ligne de texte. 
+Il prend cincomme premier paramètre et la variable chaîne comme deuxième
+
+string fullName;
+cout << "Type your full name: ";
+getline (cin, fullName);
+cout << "Your name is: " << fullName;
+
+
+Les mathematiques :
+
+La fonction peut être utilisée pour trouver la valeur la plus élevée de x et y :max(x,y)
+cout << max(5, 10);
+cout << min(5, 10);
+
+#include <cmath>
+D'autres fonctions, telles que sqrt(racine carrée), round(arrondi d'un nombre) et log (logarithme naturel), peuvent être trouvées dans le <cmath>fichier d'en-tête :
+cout << sqrt(64);
+cout << round(2.6);
+cout << log(2);
+
+
+Pensons à un « exemple réel » où nous devons savoir si une personne est en âge de voter.
+
+Dans l'exemple ci-dessous, nous utilisons l' >=opérateur de comparaison pour savoir si l'âge ( 25) est supérieur OU égal à l'âge limite de vote, qui est fixé à 18:
+
+Cool, non ? Une approche encore meilleure (puisque nous sommes sur une lancée maintenant) serait d'envelopper le code ci-dessus dans une if...elseinstruction, 
+afin que nous puissions effectuer différentes actions en fonction du résultat :
+
+int myAge = 25;
+int votingAge = 18;
+
+if (myAge >= votingAge) {
+  cout << "Old enough to vote!";
+} else {
+  cout << "Not old enough to vote.";
+}
+
+if (condition) {
+  // block of code to be executed if the condition is true
+} else {
+  // block of code to be executed if the condition is false
+}
+
+if (condition1) {
+  // block of code to be executed if condition1 is true
+} else if (condition2) {
+  // block of code to be executed if the condition1 is false and condition2 is true
+} else {
+  // block of code to be executed if the condition1 is false and condition2 is false
+}
+
+Utilisez le switch instruction pour sélectionner l'un des nombreux blocs de code à exécuter.
+Le default mot clé spécifie du code à exécuter s'il n'y a pas de correspondance de casse :
+
+switch(expression) {
+  case x:
+	// code block
+	break;
+  case y:
+	// code block
+	break;
+  default:
+	// code block
+}
+
+La whileboucle parcourt un bloc de code tant qu'une condition spécifiée esttrue :
+while (condition) {
+  // code block to be executed
+}
+
+int i = 0;
+while (i < 5) {
+  cout << i << "\n";
+  i++;
+}
+
+do {
+  // code block to be executed
+}
+while (condition);
+
+int i = 0;
+do {
+  cout << i << "\n";
+  i++;
+}
+while (i < 5);
+
+
+for (statement 1; statement 2; statement 3) {
+  // code block to be executed
+}
+
+for (int i = 0; i < 5; i++) {
+  cout << i << "\n";
+}
+Il est également possible de placer une boucle à l'intérieur d'une autre boucle. C'est ce qu'on appelle une boucle imbriquée .
+
+La « boucle interne » sera exécutée une fois pour chaque itération de la « boucle externe » :
+
+for (int i = 1; i <= 2; ++i) {
+  cout << "Outer: " << i << "\n"; // Executes 2 times
+
+  // Inner loop
+  for (int j = 1; j <= 3; ++j) {
+	cout << " Inner: " << j << "\n"; // Executes 6 times (2 * 3)
+  }
+}
+
+Il existe également une « boucle for-each » (introduite dans la version 11 de C++ (2011), 
+qui est utilisée exclusivement pour parcourir les éléments d'un tableau (ou d'autres ensembles de données) :
+
+for (type variableName : arrayName) {
+  // code block to be executed
+}
+
+int myNumbers[5] = {10, 20, 30, 40, 50};
+for (int i : myNumbers) {
+  cout << i << "\n";
+}
 */
 
 
@@ -97,7 +290,8 @@ int main() {
 	const int largeur = 100;
 
 	int air = longueur * largeur;
-	//cout << "L'air de la forme est de " << air << " cm2 \n";
+	//cout << "L'air de la forme est de " << air 
+	// << " cm2 \n";
 
 	int x;
 	// cout << "Type a number: "; // Type a number and press enter
@@ -113,8 +307,15 @@ int main() {
 	// cout << "Ecrivez un deuxieme nombre :";
 	// cin >> input2;
 
-	result = input1 + input2;
+	// result = input1 + input2;
 	// cout << "Le resultat est : " << result << endl;
+
+	int oui = 120;
+	oui += 5;
+
+	// cout << oui;
+
+	string greeting = "Hello";
 
 	return 0;
 }
