@@ -1,12 +1,37 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Valentin\\Documents\\CPlusPlus-Cours\\Tps\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\Users\\Valentin\\Documents\\CPlusPlus-Cours\\tps\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F11452E4-8668-4046-BB39-F633EA330E42}|Tps.vcxproj|C:\\Users\\Valentin\\Documents\\CPlusPlus-Cours\\tps\\tps.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F11452E4-8668-4046-BB39-F633EA330E42}|Tps.vcxproj|solutionrelative:tps.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "tps.cpp",
+              "DocumentMoniker": "C:\\Users\\Valentin\\Documents\\CPlusPlus-Cours\\tps\\tps.cpp",
+              "RelativeDocumentMoniker": "tps.cpp",
+              "ToolTip": "C:\\Users\\Valentin\\Documents\\CPlusPlus-Cours\\tps\\tps.cpp",
+              "RelativeToolTip": "tps.cpp",
+              "ViewState": "AQIAAJAAAAAAAAAAAAAAAKUAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-05-12T16:33:50.024Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

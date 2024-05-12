@@ -1,6 +1,6 @@
 ﻿  tps.cpp
-C:\Users\Valentin\Documents\CPlusPlus-Cours\Tps\tps.cpp(40,19): warning C4305: 'initializing': truncation from 'double' to 'float'
-C:\Users\Valentin\Documents\CPlusPlus-Cours\Tps\tps.cpp(50,7): warning C4101: 'mode': unreferenced local variable
-C:\Users\Valentin\Documents\CPlusPlus-Cours\Tps\tps.cpp(39,6): warning C4101: 'rayonUser': unreferenced local variable
-C:\Users\Valentin\Documents\CPlusPlus-Cours\Tps\tps.cpp(76,6): warning C4101: 'numberUser': unreferenced local variable
-  Tps.vcxproj -> C:\Users\Valentin\Documents\CPlusPlus-Cours\Tps\x64\Debug\tps.exe
+C:\Users\Valentin\Documents\CPlusPlus-Cours\tps\tps.cpp(40,19): warning C4305: 'initializing': truncation from 'double' to 'float'
+C:\Users\Valentin\Documents\CPlusPlus-Cours\tps\tps.cpp(50,7): warning C4101: 'mode': unreferenced local variable
+C:\Users\Valentin\Documents\CPlusPlus-Cours\tps\tps.cpp(39,6): warning C4101: 'rayonUser': unreferenced local variable
+C:\Users\Valentin\Documents\CPlusPlus-Cours\tps\tps.cpp(76,6): warning C4101: 'numberUser': unreferenced local variable
+  Tps.vcxproj -> C:\Users\Valentin\Documents\CPlusPlus-Cours\tps\x64\Debug\tps.exe
